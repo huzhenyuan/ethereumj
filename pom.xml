@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+    <modules>
+        <module>ethereumj-core</module>
+    </modules>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.5.RELEASE</version>
+        <relativePath/>
+    </parent>
+    <groupId>org.ethereum</groupId>
+    <artifactId>ethereumj</artifactId>
+    <version>1.0.0</version>
+    <name>ethereumj</name>
+    <description>Ethereum project for Spring Boot</description>
+
+
+    <repositories>
+        <repository>
+            <name>Spring Plugin</name>
+            <id>spring</id>
+            <url>http://repo.spring.io/plugins-release</url>
+        </repository>
+        <repository>
+            <name>Ethereum Plugin</name>
+            <id>ethereum</id>
+            <url>https://dl.bintray.com/ethereum/maven/</url>
+        </repository>
+    </repositories>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>org.ethereum.Start</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
